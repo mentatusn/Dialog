@@ -2,6 +2,7 @@ package keyone.to.keytwo.dialog;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String TAG_FRAGMENT_BUILDER = "sdgsredg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +24,20 @@ public class MainActivity extends AppCompatActivity {
         createDialog3();
         createDialog4();
         createDialog5();
+        createDialog6();
+        createDialog7();
 
-        /*BadClass badClass = new BadClass(1,2,3,4,5,6,7);
-        GoodClass goodClass = new GoodClass.Builder(1,2)
+        //BadClass badClass = new BadClass(1,2,3,4,5,6,7);
+        /*GoodClass goodClass = new GoodClass.Builder(1,2)
                 .setField3(3)
                 .setField4(4)
                 .setField5(5)
                 .setField6(6)
                 .setField7(7).build();*/
 
+
     }
+
 
     private void createDialog1() {
         ((Button) findViewById(R.id.buttonAlertDialog1)).setOnClickListener(new View.OnClickListener() {
@@ -121,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     boolean[] checkElements = {false, false, false, false};
 
     private void createDialog4() {
@@ -157,8 +163,27 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void createDialog6() {
+        ((Button) findViewById(R.id.buttonAlertDialog6)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment dialogFragment = new DialogBuilderFragment();
+                dialogFragment.show(getSupportFragmentManager(), TAG_FRAGMENT_BUILDER);
+            }
+        });
+    }
+    private void createDialog7() {
+        ((Button) findViewById(R.id.buttonAlertDialog7)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment dialogFragment = new DialogCustomFragment();
+                dialogFragment.show(getSupportFragmentManager(), TAG_FRAGMENT_BUILDER);
+            }
+        });
+    }
+
     private void createDialog5() {
-        ((Button) findViewById(R.id.buttonAlertDialog5)).setOnClickListener(new View.OnClickListener() {
+        ((Button) findViewById(R.id.buttonAlertDialog6)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -180,5 +205,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void getResult(String message) {
+        Toast.makeText(this,
+                "Сработало  " + message,
+                Toast.LENGTH_SHORT).show();
     }
 }

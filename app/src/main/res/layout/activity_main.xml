@@ -36,5 +36,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Диалог с своим интерфейсом" />
+    <Button
+        android:id="@+id/buttonAlertDialog6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ДиалогФрагмент с своим интерфейсом" />
+    <Button
+        android:id="@+id/buttonAlertDialog7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ДиалогФрагмент с своим super интерфейсом" />
 
 </LinearLayout>
