@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/padding"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonAlertDialog1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Диалог с одной кнопкой" />
+
+    <Button
+        android:id="@+id/buttonAlertDialog2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Диалог со списком" />
+
+    <Button
+        android:id="@+id/buttonAlertDialog3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Диалог с выбором" />
+    <Button
+        android:id="@+id/buttonAlertDialog4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Диалог с выбором нескольких вариантов" />
+
+    <Button
+        android:id="@+id/buttonAlertDialog5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Диалог с своим интерфейсом" />
+
+</LinearLayout>

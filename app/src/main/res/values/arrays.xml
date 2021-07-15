@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list">
+        <item>1 пункт</item>
+        <item>2 пункт</item>
+        <item>3 пункт</item>
+        <item>4 пункт</item>
+    </string-array>
+</resources>
